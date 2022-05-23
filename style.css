@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: uppercase;
+ }
+ #logo{
+     width:200px;
+     position: relative;
+     left: 46%;
+     margin:2% 0%;
+ }
+#menu-btn{
+    display: none;
+    float: right;
+    position: relative;
+    top: 132px;
+    left: -48px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.fas{
+    line-height: 3;
+}
+ header nav ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+ }
+ header nav li{
+    margin:1% 0%;
+
+ }
+ header nav li a{
+    
+    color: gray;
+ }
+ header nav li a:hover{
+    
+    color:#cec397 ;
+    font-weight: bold;
+ }
+ header div{
+     background-color: black;
+     color: aliceblue;
+     text-align: center;
+
+ }
+ #glow{
+     height: 55px;
+     padding: 17px;
+ }
+ .content img{
+   width: 100%;
+ }
+ .parg{
+     padding: 47px;
+ }
+ #first-prg{
+    font-weight: bold;
+    font-size: 49px;
+ }
+ #snd-prg ,#last{
+     margin-top: 54px ;
+     font-size: 30px;
+     text-align: center;
+    
+ }
+ 
+ .info{
+     border-bottom: 2px solid rgba(128, 128, 128, 0.611);
+ }
+.info h3{
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+}
+.logos img{
+    width: 28px;
+    margin: 17px;
+}
+#appstore{
+    width: 130px;
+}
+#googleplay{
+    width: 141px;
+}
+.stores-logo{
+    margin-bottom: 15px;
+}
+.logos a ,.stores-logo a{
+    position: relative;
+    left: 39%;
+   
+}
+footer{
+    text-align: center;
+    padding: 63px;
+    
+}
+footer p , footer a{
+    margin: 12px;
+    text-transform: capitalize;
+   
+}
+footer strong{
+    font-weight: bolder;
+}
+
+/* Media Queries */
+
+
+@media only screen and (max-width:991px) {
+    html{
+        font-size: 70%;
+        
+    }
+    #logo{
+        position: relative;
+        left: 33%;
+    }
+    
+}
+@media only screen and (max-width:600px) {
+    #menu-btn{
+        display: inline-block;
+        position: absolute;
+        top:36px ;
+        left: 82%;
+        width: 30px;
+        height: 30px;
+        transition: .2s linear;
+    }
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+    #logo{
+        position: relative;
+        left: 10%;
+    }
+   
+    .navbar{
+        display: none;
+    }
+    .navbar ul{
+       display: block;
+       margin: 13px;
+     }
+     #glow{
+         width: 600px;
+     }
+     .content img{
+        width: 600px;
+    }
+    
+    
+    footer{
+        width: 600px;
+    }
+
+    
+}
