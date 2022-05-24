@@ -8,99 +8,110 @@
     text-decoration: none;
     text-transform: uppercase;
  }
- #logo{
-     max-width:15%;
-     position: relative;
-     left: 44%;
-     margin:2% 0%;
- }
+ 
+ .head {
+    position: relative;
+    margin: 10px;
+    height: 120px;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    position:relative;
+    top: 67%;
+}
+.navbar a{
+    color: gray;
+}
+.navbar a:hover{
+    color:#cec397 ;
+    font-weight: bold; 
+}
+
+#logo {
+    position: absolute;
+    left: 45%;
+    top: 12%;
+}
+#logo img{
+    width: 20%;
+}
+#glow{
+    background-color: black;
+    text-align: center;
+    color: aliceblue;
+    height: 49px;
+    line-height: 49px;
+}
 #menu-btn{
     display: none;
-    float: right;
     position: absolute;
-    top: 44px;
-    left: 93%;
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    cursor: pointer;
+    left: 95%;
+    top: 67%;
+}
+.content img{
+    width: 100%;
 }
 
-
-
-.fas{
-    line-height: 3;
+.parg{
+    
+    padding: 40px;
 }
-
- header nav ul{
-    display: flex;
-    list-style-type: none;
-    justify-content: space-around;
-    align-items: center;
- }
- header nav li{
-    margin:1% 0%;
-
- }
- header nav li a{
-    
-    color: gray;
- }
- header nav li a:hover{
-    
-    color:#cec397 ;
+.parg p{
+    font-size: 28px;
+    margin: 15px;
+}
+#first-prg{
+    font-size: 45px;
     font-weight: bold;
- }
-
- #glow{
-    background-color: black;
-    color: aliceblue;
+}
+#last{
     text-align: center;
-     height: 55px;
-     padding: 17px;
- }
- .content img{
-   width: 100%;
- }
- .parg{
-     padding: 47px;
- }
- #first-prg{
-    font-weight: bold;
-    font-size: 49px;
- }
- #snd-prg ,#last{
-     margin-top: 54px ;
-     font-size: 30px;
-     text-align: center;
-    
- }
- 
- .info{
-     border-bottom: 2px solid rgba(128, 128, 128, 0.611);
- }
-.info h3{
-    font-weight: bold;
+}
+.links{
+    position: relative;
+    height: 149px;
+}
+ .links h3{
     text-align: center;
-    text-transform: capitalize;
+    font-weight: bold;
+    font-family: sans-serif;
 }
-.logos img{
-    width: 28px;
-    margin: 17px;
+
+.logos{
+    position: absolute;
+    left: 38%;
+    width: 400px;
 }
-#appstore{
-    width: 130px;
-}
-#googleplay{
-    width: 141px;
+
+.logos a img{
+    max-width: 10%;
+    margin: 16px;
 }
 .stores-logo{
-    margin-bottom: 15px;
+    width: 50%;
+    position: absolute;
+    left: 42%;
+    top: 94px;
 }
-.logos a ,.stores-logo a{
+
+.stores-logo a img{
+    width: 20%;
+}
+#appstore{
+    width: 18%;
+}
+hr {
+    width: 90%;
+    margin: 2% 5%;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+.footer-card{
     position: relative;
-    left: 39%;
-   
 }
 footer{
     text-align: center;
@@ -116,32 +127,74 @@ footer strong{
     font-weight: bolder;
 }
 
+
 /* Media Queries */
 
 
 @media only screen and (max-width:991px) {
     html{
-        font-size: 70%;
+        font-size: 20px;
         
     }
-    #logo{
-        position: relative;
-        left: 40%;
+    #logo img{
+        width: 27%;
     }
     
 }
 @media only screen and (max-width:600px) {
-    html{
-        width: 600px;
+    #menu-btn{
+        display: inline-block;
+        position: absolute;
+        top: 29%;
+        left: 78%;
+        width: 30px;
+        height: 30px;
+        transition: .2s linear;
     }
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+     }  
+     #logo{
+        position: relative;
+        left: 10%;
+    } 
+    
+    .navbar{
+        position: absolute;
+        top: 72%;
+        left: 42%;
+        right: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+        background-color: aliceblue;
+        line-height: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
+    }
+    .navbar a:hover{
+        width: 100%;
+        text-align: center;
+        background-color: black;
+        
+    }
+    .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+     }
      #glow{
          width: 600px;
      }
      .content img{
         width: 600px;
     }
-    
+    .logos{
+        position: absolute;
+        left: 21%;
+    }
+    .logos a img {
+        max-width: 8%;
+    }
     
     footer{
         width: 600px;
@@ -150,3 +203,7 @@ footer strong{
     
 }
 
+@media screen and(max-width:400px) {
+   
+   
+}
